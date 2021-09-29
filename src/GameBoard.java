@@ -25,8 +25,8 @@ public class GameBoard {
 		System.out.println(spot[1]);
 		board[spot[0]][spot[1]] = 1;
 	}
-	private static void combineRight() {
-		// TODO Auto-generated method stub
+	//make sure move method called before and after combine method
+	private static void combineRight() { 
 		for (int i = 0; i < rows; i++) {
 			for (int j = cols - 1; j > 0; j--) {
 				if (board[i][j - 1] == board[i][j]) {
@@ -38,7 +38,6 @@ public class GameBoard {
 	}
 
 	private static void combineDown() {
-		// TODO Auto-generated method stub
 		for (int i = rows - 1; i > 0; i--) {
 			for (int j = 0; j < cols; j++) {
 				if (board[i - 1][j] == board[i][j]) {
@@ -50,7 +49,6 @@ public class GameBoard {
 	}
 
 	private static void combineLeft() {
-		// TODO Auto-generated method stub
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols - 1; j++) {
 				if (board[i][j + 1] == board[i][j]) {
@@ -62,7 +60,6 @@ public class GameBoard {
 	}
 
 	private static void combineUp() {
-		// TODO Auto-generated method stub
 		for (int i = 0; i < rows - 1; i++) {
 			for (int j = 0; j < cols; j++) {
 				if (board[i + 1][j] == board[i][j]) {
